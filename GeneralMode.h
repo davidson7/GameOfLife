@@ -2,7 +2,6 @@
 
 using namespace std;
 
-class ClassicBoundary{
+class GeneralMode{
 public:
-  ClassicBoundary();
 }
