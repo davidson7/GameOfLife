@@ -1,4 +1,3 @@
-#include <iostream>
 
 using namespace std;
 
@@ -7,5 +6,7 @@ public:
   GeneralMode();
   ~GeneralMode();
 
-  
-}
+  int getNeighbors(int x, int y);
+
+  int neighbors;
+};
