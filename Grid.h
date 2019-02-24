@@ -1,4 +1,3 @@
-#include <iostream>
 
 using namespace std;
 
@@ -13,4 +12,4 @@ public:
 private:
   int width;
   int length;
-}
+};
