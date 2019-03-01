@@ -8,5 +8,6 @@ public:
 
   int getNeighbors(int x, int y);
 
+private:
   int neighbors;
 };

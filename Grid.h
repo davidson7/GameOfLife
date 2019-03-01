@@ -10,6 +10,8 @@ public:
   void setDimensions(int width, int length);
 
 private:
-  int width;
-  int length;
+  int mWidth;
+  int mHeight;
+
+  char myGrid[][];
 };
