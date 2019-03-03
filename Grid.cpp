@@ -9,6 +9,8 @@ for(int i = 0; i<mWidth;++i){
   myGrid[i] = new char[mHeight];
 }
 
+}
+
 Grid::Grid(int width, int height){
   mWidth = width;
   mHeight = height;

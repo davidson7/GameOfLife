@@ -12,3 +12,5 @@ GeneralMode::~GeneralMode(){
 int GeneralMode::getNeighbors(int x, int y){
 
 }
+
+void display(){}
