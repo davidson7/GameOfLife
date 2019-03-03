@@ -1,4 +1,3 @@
-
 using namespace std;
 
 class Grid{
@@ -7,11 +6,11 @@ public:
   Grid(int width, int length);
   ~Grid();
 
-  void setDimensions(int width, int length);
+  //void setDimensions(int width, int length);
 
 private:
   int mWidth;
   int mHeight;
 
-  char myGrid[][];
+  char **myGrid;
 };

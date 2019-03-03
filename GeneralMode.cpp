@@ -1,4 +1,4 @@
-#include 'GeneralMode.h'
+#include "GeneralMode.h"
 using namespace std;
 
 GeneralMode::GeneralMode(){
