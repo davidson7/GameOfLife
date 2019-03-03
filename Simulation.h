@@ -10,5 +10,7 @@ class Simulation{
     bool dead();
     bool live();
 
+    void update(int x, int y);
+
 
 };
