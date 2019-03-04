@@ -1,4 +1,7 @@
 #include <iostream>
+#include <fstream>
+#include <cstdlib>
+//#include <string>
 #include "Simulation.h"
 #include "ClassicMode.h"
 #include "Grid.h"
@@ -17,8 +20,16 @@ int main(){
 
   //check for valid input and get dimensions of grid, and placement of filled cells
   if(randomOrMap=='m'){
+    ifstream inStream;
     cout<<"What is the absolute path of the file?"<< endl;
-    //cin>>abosolute path
+    string filepath;
+    cin>> filepath;
+    inStream.open(filepath);
+    //check if file can be opened
+    if(inStream.fail()){
+      cout << "Opening input file failed. Make sure you entered the absolute path\n";
+      exit(1);
+    }
     //check if file can open
   }else if(randomOrMap=='r'){
     cout<< "What would you like the dimensions of the grid to be?"<< endl;

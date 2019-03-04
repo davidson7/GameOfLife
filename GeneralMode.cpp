@@ -10,7 +10,7 @@ neighbors = 0;
 }
 
 GeneralMode::~GeneralMode(){
-
+ neighbors =0;
 }
 
 int GeneralMode::getNeighbors(int x, int y, Grid myGrid){
