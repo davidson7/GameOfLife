@@ -32,16 +32,41 @@ int main(){
     }
     //read dimensions
   }else if(randomOrMap=='r'){
+    //set grid width and check if int
     cout<< "How wide should the grid be?"<< endl;
     cin>>boardWidth;
+    if(cin.fail()){
+      cout <<"You didn't enter an integer";
+      exit(0);
+    }
+    //set grid height and check if int
     cout << "How tall should the grid be?"<< endl;
     cin>> boardHeight;
+    if(cin.fail()){
+      cout <<"You didn't enter an integer";
+      exit(0);
+    }
 
   } else{
     cout << "Please enter a valid answer";
     exit(1);
   }
+
+
 //set dimensions of grid
 //Grid board[][] = new Grid(boardWidth,boardHeight);
+
+//if file input, populate Grid
+//if no file, ask for decimal 0-1 to populate Grid
+
+//ask what mode
+
+//ask if breif pause, or press enter or output to file
+
+//method to check if grid is empty?
+
+//method to check if grid is infinite (either too many generations or grid stays the same)
+
+//ask user to press enter to exit
 
 }
