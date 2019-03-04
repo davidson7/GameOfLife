@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
-//#include <string>
+#include <string>
 #include "Simulation.h"
 #include "ClassicMode.h"
 #include "Grid.h"
@@ -30,10 +30,13 @@ int main(){
       cout << "Opening input file failed. Make sure you entered the absolute path\n";
       exit(1);
     }
-    //check if file can open
+    //read dimensions
   }else if(randomOrMap=='r'){
-    cout<< "What would you like the dimensions of the grid to be?"<< endl;
-//cin>>grid dimensions
+    cout<< "How wide should the grid be?"<< endl;
+    cin>>boardWidth;
+    cout << "How tall should the grid be?"<< endl;
+    cin>> boardHeight;
+
   } else{
     cout << "Please enter a valid answer";
     exit(1);
