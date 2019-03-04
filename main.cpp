@@ -8,6 +8,8 @@ using namespace std;
 int main(){
 
   char randomOrMap;
+  int boardWidth;
+  int boardHeight;
 
 //ask for file to read from or random generation
   cout<<"Would you like to use a map file(m) or random generation(r)?"<<endl;
@@ -26,6 +28,6 @@ int main(){
     exit(1);
   }
 //set dimensions of grid
-
+//Grid board[][] = new Grid(boardWidth,boardHeight);
 
 }

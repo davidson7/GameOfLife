@@ -24,6 +24,10 @@ Grid::~Grid(){
 
 }
 
+char Grid::getContent(int xPosition, int yPosition){
+  return myGrid[xPosition][yPosition];
+}
+
 /*void Grid::setDimensions(int width, int height){
   mWidth = width;
   mHeight = height;

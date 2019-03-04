@@ -1,4 +1,6 @@
-
+//to populate the grid and create generations
+#ifndef GRID_H
+#define GRID_H
 using namespace std;
 
 class Simulation{
@@ -14,3 +16,4 @@ class Simulation{
 
 
 };
+#endif
