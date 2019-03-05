@@ -8,11 +8,10 @@ class Simulation{
     Simulation();
     ~Simulation();
 
-    bool isFilled();
-    bool dead();
-    bool live();
+    bool isDead();
+    bool isAlive();
 
-    void update(int x, int y);
+    void update(int x, int y); // depending on neighbors, fill next gen
 
 
 };

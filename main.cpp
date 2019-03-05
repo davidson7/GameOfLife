@@ -54,9 +54,17 @@ int main(){
 
 
 //set dimensions of grid
-//Grid board[][] = new Grid(boardWidth,boardHeight);
+Grid board(boardWidth, boardHeight);
 
 //if file input, populate Grid
+if(randomOrMap=='m'){
+  //read in line 3+ one char at a time and fill grid
+  for(int i =0; i<boardWidth; ++i){
+    for(int j =0; j<boardHeight; ++j){
+      //board.fill(i,j, board);
+    }
+  }
+}
 //if no file, ask for decimal 0-1 to populate Grid
 
 //ask what mode
