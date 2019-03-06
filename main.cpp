@@ -23,14 +23,30 @@ int main(){
     ifstream inStream;
     cout<<"What is the absolute path of the file?"<< endl;
     string filepath;
-    cin>> filepath;
+    cin>>filepath;
     inStream.open(filepath);
+
     //check if file can be opened
     if(inStream.fail()){
-      cout << "Opening input file failed. Make sure you entered the absolute path\n";
+      cout << "Opening input file failed. Make sure you entered the path correctly\n";
       exit(1);
     }
+
     //read dimensions
+    string line;
+    inStream >> line;
+
+  /*  boardHeight=line[1];
+    inStream.ignore(10,'\n');
+    boardWidth=line[2];
+
+    cout<< boardHeight;
+    cout << boardWidth;*////broken
+    cout<<"File reading currently broken, please manually enter dimensions"<<endl;
+    inStream.close();
+    exit(0);
+
+
   }else if(randomOrMap=='r'){
     //set grid width and check if int
     cout<< "How wide should the grid be?"<< endl;
@@ -46,12 +62,10 @@ int main(){
       cout <<"You didn't enter an integer";
       exit(0);
     }
-
-  } else{
+  }else{
     cout << "Please enter a valid answer";
     exit(1);
   }
-
 
 //set dimensions of grid
 Grid board(boardWidth, boardHeight);
@@ -59,20 +73,34 @@ Grid board(boardWidth, boardHeight);
 //if file input, populate Grid
 if(randomOrMap=='m'){
   //read in line 3+ one char at a time and fill grid
-  for(int i =0; i<boardWidth; ++i){
-    for(int j =0; j<boardHeight; ++j){
+  ifstream inStream;
+  string line;
+  inStream >> line;
+
+  for(int i =0; i<boardHeight; ++i){
+    for(int j =0; j<boardWidth; ++j){
       //read in char
-      char c;
-      //cin>> c;
-      board.fill(i,j,c);
+      char c = line[j];
+      cout << c; //remove later
+      board.fill(j,i,c);
+
     }
   }
+  inStream.close();
 }
 //if no file, ask for decimal 0-1 to populate Grid
+if(randomOrMap == 'r'){
+  cout<<"Please enter a decimal, 0-1"<< endl;
+  float concentration;
+  cin>>concentration;
 
+}
 //ask what mode
+cout<<"Which mode?";
 
 //ask if breif pause, or press enter or output to file
+
+//start printing grids
 
 //method to check if grid is empty?
 
