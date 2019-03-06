@@ -61,7 +61,10 @@ if(randomOrMap=='m'){
   //read in line 3+ one char at a time and fill grid
   for(int i =0; i<boardWidth; ++i){
     for(int j =0; j<boardHeight; ++j){
-      //board.fill(i,j, board);
+      //read in char
+      char c;
+      //cin>> c;
+      board.fill(i,j,c);
     }
   }
 }

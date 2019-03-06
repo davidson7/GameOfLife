@@ -11,7 +11,7 @@ public:
   ~Grid();
 
   char getContent(int xPosition, int yPosition);   //fill grid for the first time
-  void fill(int x, int y, Grid board);
+  void fill(int x, int y,char c);
 
   //void setDimensions(int width, int length);
 

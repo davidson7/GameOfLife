@@ -28,6 +28,9 @@ char Grid::getContent(int xPosition, int yPosition){
   return myGrid[xPosition][yPosition];
 }
 
+void Grid::fill(int x, int y,char c){
+  myGrid[x][y]='c';
+}
 /*void Grid::setDimensions(int width, int height){
   mWidth = width;
   mHeight = height;
