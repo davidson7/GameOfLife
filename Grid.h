@@ -6,12 +6,13 @@ using namespace std;
 
 class Grid{
 public:
-  Grid();
+  //Grid();
   Grid(int width, int length);
   ~Grid();
 
   char getContent(int xPosition, int yPosition);   //fill grid for the first time
   void fill(int x, int y,char c);
+  void print();
 
   //void setDimensions(int width, int length);
 
