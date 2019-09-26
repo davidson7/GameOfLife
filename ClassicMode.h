@@ -1,11 +1,12 @@
 using namespace std;
 //#include "GeneralMode.h"
-class GeneralMode{};
 
-class ClassicMode: public GeneralMode {
+class ClassicMode{
 public:
   ClassicMode();
   ~ClassicMode();
+
+  int countNeighbors(Cell c, Grid g1);
 };
 
 //#endif
