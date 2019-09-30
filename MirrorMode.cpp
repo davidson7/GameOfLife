@@ -1,15 +1,14 @@
-#include "ClassicMode.h"
-
+#include "MirrorMode.h"
 using namespace std;
 
-ClassicMode::ClassicMode(){
+MirrorMode::MirrorMode(){
 
 }
-ClassicMode::~ClassicMode(){
+MirrorMode::~MirrorMode(){
 
 }
 
-void ClassicMode::countNeighbors(Grid g1){
+void MirrorMode::countNeighbors(Grid g1){
 //for each Cell in grid1
   for(int i =0; i<g1.getWidth();++i){
     for(int j=0; j<g1.getHeight();++j){

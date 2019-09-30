@@ -1,13 +1,11 @@
 #include "Grid.h"
-//#include "Cell.h"
 using namespace std;
 
-class ClassicMode{
+class MirrorMode{
 public:
-  ClassicMode();
-  ~ClassicMode();
+  MirrorMode();
+  ~MirrorMode();
 
+  //void display();
   void countNeighbors(Grid g1);
 };
-
-//#endif

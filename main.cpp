@@ -2,8 +2,8 @@
 #include <fstream>
 #include <cstdlib>
 #include <string>
-#include "Simulation.h"
-#include "ClassicMode.h"
+//#include "Cell.h"
+//#include "ClassicMode.h"
 #include "Grid.h"
 
 using namespace std;
