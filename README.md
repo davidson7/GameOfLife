@@ -10,3 +10,4 @@ https://stackoverflow.com/questions/1790704/difference-between-square-brackets-a
 https://stackoverflow.com/questions/29310863/multidimensional-arrays-as-class-member-with-arbitrary-bounds
 http://www.cplusplus.com/forum/beginner/221936/
 https://stackoverflow.com/questions/20013901/im-getting-an-error-invalid-use-of-incomplete-type-class-map
+https://www.learncpp.com/cpp-tutorial/logical-operators/
