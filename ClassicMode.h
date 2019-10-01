@@ -1,5 +1,6 @@
-#include "Grid.h"
-//#include "Cell.h"
+#ifndef GRID_H
+#define GRID_H
+
 using namespace std;
 
 class ClassicMode{
@@ -7,7 +8,8 @@ public:
   ClassicMode();
   ~ClassicMode();
 
-  void countNeighbors(Grid g1);
+  int countNeighbors(Grid g1, int x, int y);
+  void fillGrid(Grid g1, Grid g2);
 };
 
-//#endif
+#endif

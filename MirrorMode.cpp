@@ -8,10 +8,10 @@ MirrorMode::~MirrorMode(){
 
 }
 
-void MirrorMode::countNeighbors(Grid g1){
+int MirrorMode::countNeighbors(Grid g1,int i, int j){
 //for each Cell in grid1
-  for(int i =0; i<g1.getWidth();++i){
-    for(int j=0; j<g1.getHeight();++j){
+  //for(int i =0; i<g1.getWidth();++i){
+    //for(int j=0; j<g1.getHeight();++j){
         int neighbors =0;
 
       //start counting neighbors from top left corner of "9 grid"
@@ -21,15 +21,13 @@ void MirrorMode::countNeighbors(Grid g1){
           if(!(x<0||y<0||x>g1.getWidth()||y>g1.getHeight())){
             //if not "center" 9th square
             if(!(x==i&&y==j)){
-            if(g1[x][y].isAlive()){
+            if(g1.getChar(x,y)=='X'){
               neighbors++;;
             }
             }
           }
         }
       }
-      g1[i][j].setNeighbors(neighbors);
+      return neighbors;
 
     }
-  }
-}

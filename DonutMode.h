@@ -2,10 +2,10 @@
 #define GRID_H
 using namespace std;
 
-class MirrorMode{
+class DonutMode{
 public:
-  MirrorMode();
-  ~MirrorMode();
+  DonutMode();
+  ~DonutMode();
 
   //void display();
   int countNeighbors(Grid g1, int i, int j);

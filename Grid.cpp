@@ -17,78 +17,80 @@ for(int i = 0; i<mWidth;++i){
 Grid::Grid(int width, int height){
   mWidth = width;
   mHeight = height;
-  myGrid = new Cell*[mWidth];
-  for(int i = 0; i<mWidth;++i){
-    myGrid[i] = new Cell[mHeight];
+  myGrid = new char*[height];
+  for(int i = 0; i<height; i++){
+    myGrid[i] = new char[width];
   }
+  for(int x=0; x<mHeight;++x){
+  for (int y = 0; y<mWidth;++y){
+    myGrid[x][y]='-';
+  }
+}
+}
 
-  for(int i = 0; i<mWidth;++i){
+  /*for(int i = 0; i<mWidth;++i){
       for(int j = 0; j<mHeight;++j){
         cout <<"TEST:" << endl;
     }
-  }
-}
+  }*/
+
 
 Grid::~Grid(){
 delete myGrid;
 }
 
-/*char Grid::getContent(int xPosition, int yPosition){
-  return myGrid[xPosition][yPosition];
-}*/
-
-//g1.fillGrid(Grid g2)
-//goes through grid and fills g2 with alive and dead cells
-//TODO test this method
-void Grid::fillGrid(Grid &grid2, Grid &grid1){
-  for(int i = 0; i<grid2.getWidth();++i){
-    for(int j =0; j<grid2.getHeight();++j){
-      //cout <<"TEST:" << grid1[i][j];
-      //Cell c1 = grid1[i][j];
-      //bool placeholder = grid2.fillCell(c1);
-      //Cell c2 = grid2[i][j]; //error here
-      //c2.setAlive(placeholder);
-    }
-  }
+void Grid::manualFill(int xPosition, int yPosition, char alive){
+  myGrid[xPosition][yPosition] = alive;
 }
 
 
-bool Grid::fillCell(Cell c){
-  if(c.getNeighbors()<=1){
+//pass in number of neighbors, return bool alive or dead for next gen
+bool Grid::fillCell(int c, bool alive){
+  if(c<=1){
     //Cell dead
     return false;
 
-  }if(c.getNeighbors()==2){
+  }if(c==2){
     //stable, check .isAlive
-    if (c.isAlive()){
+    if (alive){
       return true;
     }
     return false;
 
-  }if(c.getNeighbors()==3){
+  }if(c==3){
     //Cell alive
     return true;
 
-  }if(c.getNeighbors()>=4){
+  }if(c>=4){
     //Cell dead
     return false;
 
   }
 }
-void Grid::print(){ //TODO
 
+
+void Grid::print(){ //TODO
+  for(int i=0; i<mHeight;++i){
+    for(int j= 0; j<mWidth; ++j){
+      cout<<"| "<<myGrid[i][j]<<" ";
+    }
+    cout<<endl;
+  }
 }
+
  int Grid::getHeight(){
    return mHeight;
  }
  int Grid::getWidth(){
    return mWidth;
  }
+ char Grid::getChar(int x, int y){
+   return myGrid[x][y];
+ }
+
+
 
 /*void Grid::setDimensions(int width, int height){
   mWidth = width;
   mHeight = height;
-  myGrid =
-
-}
-*/
+  myGrid = */

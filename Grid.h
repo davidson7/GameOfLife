@@ -1,8 +1,5 @@
 //game board
-//#ifndef GENERALMODE_H
-//#define GENERALMODE_H
-//#include "GeneralMode.h"
-#include "Cell.h"
+
 using namespace std;
 
 class Grid{
@@ -14,13 +11,17 @@ public:
   //char getContent(int xPosition, int yPosition);
   //fill grid for the first time??
 
+
+  void manualFill(int i, int j, char c);
   //calls fillCell to creat the next gen
-  void fillGrid(Grid &g2, Grid &grid2);
+  //void fillGrid(Grid g2, Grid grid2);
   //decides to return - or X based on # of neighbors
-  bool fillCell(Cell c);
+  bool fillCell(int c, bool alive);
   void print();
   int getHeight();
   int getWidth();
+  char getChar(int x, int y);
+  
 
   //void setDimensions(int width, int length);
 
@@ -28,7 +29,7 @@ private:
   int mWidth;
   int mHeight;
 
-  Cell **myGrid;
+  char **myGrid;
 };
 
 //#endif
