@@ -15,7 +15,7 @@ public:
   //fill grid for the first time??
 
   //calls fillCell to creat the next gen
-  void fillGrid(Grid g2, Grid grid2);
+  void fillGrid(Grid &g2, Grid &grid2);
   //decides to return - or X based on # of neighbors
   bool fillCell(Cell c);
   void print();

@@ -9,8 +9,9 @@
 using namespace std;
 
 int main(){
+  Grid *firstGrid = new Grid(3,3);
 
-  char randomOrMap;
+  /*char randomOrMap;
   int boardWidth;
   int boardHeight;
 
@@ -41,7 +42,8 @@ int main(){
     boardWidth=line[2];
 
     cout<< boardHeight;
-    cout << boardWidth;*////broken
+    cout << boardWidth;///broken TODO add end block comment
+
     cout<<"File reading currently broken, please manually enter dimensions"<<endl;
     inStream.close();
     exit(0);
@@ -96,7 +98,7 @@ if(randomOrMap == 'r'){
 
 }
 //ask what mode
-cout<<"Which mode?";
+cout<<"Which mode?";*/
 
 //ask if breif pause, or press enter or output to file
 
@@ -107,5 +109,5 @@ cout<<"Which mode?";
 //method to check if grid is infinite (either too many generations or grid stays the same)
 
 //ask user to press enter to exit
-
+return 0;
 }

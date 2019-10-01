@@ -1,4 +1,5 @@
 #include "Grid.h"
+#include <iostream>
 //#include "Cell.h
 using namespace std;
 
@@ -20,6 +21,12 @@ Grid::Grid(int width, int height){
   for(int i = 0; i<mWidth;++i){
     myGrid[i] = new Cell[mHeight];
   }
+
+  for(int i = 0; i<mWidth;++i){
+      for(int j = 0; j<mHeight;++j){
+        cout <<"TEST:" << endl;
+    }
+  }
 }
 
 Grid::~Grid(){
@@ -33,13 +40,14 @@ delete myGrid;
 //g1.fillGrid(Grid g2)
 //goes through grid and fills g2 with alive and dead cells
 //TODO test this method
-void Grid::fillGrid(Grid grid2, Grid grid1){
+void Grid::fillGrid(Grid &grid2, Grid &grid1){
   for(int i = 0; i<grid2.getWidth();++i){
     for(int j =0; j<grid2.getHeight();++j){
-      Cell c1 = grid1[i][j];
-      bool placeholder = grid2.fillCell(c1);
-      Cell c2 = grid2[i][j]; //error here
-      c2.setAlive(placeholder);
+      //cout <<"TEST:" << grid1[i][j];
+      //Cell c1 = grid1[i][j];
+      //bool placeholder = grid2.fillCell(c1);
+      //Cell c2 = grid2[i][j]; //error here
+      //c2.setAlive(placeholder);
     }
   }
 }
