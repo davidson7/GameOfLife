@@ -17,10 +17,34 @@ int MirrorMode::countNeighbors(Grid g1,int i, int j){
       //start counting neighbors from top left corner of "9 grid"
       for(int x = i-1;x<=i+1;++x){
         for(int y = j-1; y<=j+1;++y){
+
+          //if not "center" 9th square
+          if(!(x==i&&y==j)){
+
+            if(x<0&&y<0){
+
+              if(g1.getChar(x,y)=='X'){
+                neighbors++;;
+
+            }else if(x<0&&y>g1.getHeight()){
+
+              if(g1.getChar(x,y)=='X'){
+                neighbors++;;
+
+            }else if(x>g1.gethWidth()&&y<0){
+
+              if(g1.getChar(x,y)=='X'){
+                neighbors++;;
+            }else if(x>g1.getWidth()&&y>g1.getHeight()){
+
+              if(g1.getChar(x,y)=='X'){
+                neighbors++;;
+            }else if()
+
+
           //if not out of bounds
           if(!(x<0||y<0||x>g1.getWidth()||y>g1.getHeight())){
-            //if not "center" 9th square
-            if(!(x==i&&y==j)){
+
             if(g1.getChar(x,y)=='X'){
               neighbors++;;
             }

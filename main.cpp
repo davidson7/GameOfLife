@@ -136,7 +136,8 @@ if(modeChar == 'c'){
 
 
 //ask if breif pause, or press enter or output to file
-cout<<"Would you like to output to a file?"<<endl;
+//cout<<"Would you like to output to a file? (y/n)"<<endl;
+
 
 
 //start printing grids
