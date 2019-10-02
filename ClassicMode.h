@@ -8,5 +8,5 @@ public:
 
   int countNeighbors(Grid g1, int x, int y);
     //calls fillCell to create the next gen
-  void fillGrid(Grid g1, Grid g2);
+void fillGrid(Grid g2, Grid g1);
 };

@@ -21,25 +21,31 @@ int MirrorMode::countNeighbors(Grid g1,int i, int j){
           //if not "center" 9th square
           if(!(x==i&&y==j)){
 
+            //check out of bounds corners
             if(x<0&&y<0){
 
               if(g1.getChar(x,y)=='X'){
                 neighbors++;;
+              }
 
             }else if(x<0&&y>g1.getHeight()){
 
               if(g1.getChar(x,y)=='X'){
                 neighbors++;;
+              }
 
-            }else if(x>g1.gethWidth()&&y<0){
+            }else if(x>g1.getWidth()&&y<0){
 
               if(g1.getChar(x,y)=='X'){
                 neighbors++;;
+              }
             }else if(x>g1.getWidth()&&y>g1.getHeight()){
 
               if(g1.getChar(x,y)=='X'){
                 neighbors++;;
-            }else if()
+              }
+              //check out of bounds edges
+            }else if(x<0)
 
 
           //if not out of bounds

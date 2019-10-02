@@ -122,25 +122,64 @@ board.print();
 
 //ask what mode
 cout<<"Which mode? Classic (c), Mirror (m), or Donut (d)"<<endl;
-cin>>modeChar;
-if(modeChar == 'c'){
-  ClassicMode* mode = new ClassicMode();
-}else if(modeChar =='m'){
-  MirrorMode* mode = new MirrorMode();
-}else if(modeChar == 'd'){
-  DonutMode* mode = new DonutMode();
-}else{
+cin>>modeChar; //segmentation fault here
+if(cin.fail()){
   cout<<"Please pick a valid mode"<<endl;
   exit(0);
 }
+
+//if(modeChar == 'c'||modeChar =='m'||modeChar == 'd'){}
+
+
+
+ClassicMode* Classicm = new ClassicMode();
+MirrorMode* Mirrorm = new MirrorMode();
+DonutMode* Donutm = new DonutMode();
 
 
 //ask if breif pause, or press enter or output to file
 //cout<<"Would you like to output to a file? (y/n)"<<endl;
 
 
+//start printing grids, pause every 10 to prompt user
+int totalGenCount=0;
+bool userContinue = true;
+int count =0;
+Grid newBoard(boardWidth,boardHeight);
 
-//start printing grids
+while(userContinue){
+  totalGenCount++;
+
+  if(modeChar == 'c'){
+    Classicm->fillGrid(newBoard, board);
+  }else if(modeChar =='m'){
+    Mirrorm->fillGrid(newBoard, board);
+  }else if(modeChar == 'd'){
+    Donutm->fillGrid(newBoard, board);
+  }
+  cout<<"Gen number: "<<totalGenCount<<endl;
+  newBoard.print();
+  board = newBoard;
+  count++;
+
+  if(count ==10){
+    char tenCountContinue;
+    cout<<"Do you want to continue? (y/n)"<<endl;
+    cin>>tenCountContinue;
+    if(cin.fail()){
+      cout<<"Command not understood, quitting"<<endl;
+      exit(0);
+    }
+    if(tenCountContinue == 'n'||tenCountContinue =='N'){
+      userContinue=false;
+      break;
+    }
+    count=0;
+  }
+
+
+
+}
 
 //method to check if grid is empty?
 
