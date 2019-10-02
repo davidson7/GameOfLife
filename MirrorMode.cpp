@@ -31,3 +31,23 @@ int MirrorMode::countNeighbors(Grid g1,int i, int j){
       return neighbors;
 
     }
+
+    //goes through grid and fills g2 with alive and dead cells
+    void MirrorMode::fillGrid(Grid grid2, Grid grid1){
+      for(int i = 0; i<grid2.getHeight();++i){
+        for(int j =0; j<grid2.getWidth();++j){
+          int neighbors = countNeighbors(grid1, i,j);
+          bool alive=false;
+          if(grid1.getChar(i,j)=='X'){
+            alive = true;
+          }
+          //if the next gen cell should be alive
+          if(grid2.fillCell(neighbors, alive)){
+            grid2.manualFill(i,j,'X');
+          }else{ //else dead
+            grid2.manualFill(i,j,'-');
+          }
+
+        }
+      }
+    }
