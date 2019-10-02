@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <cstdlib>
 
 #include "ClassicMode.h"
@@ -23,7 +24,7 @@ int main(){
   char randomOrMap;
   int boardWidth;
   int boardHeight;
-  char mode;
+  char modeChar;
 
 
 //ask for file to read from or random generation
@@ -45,15 +46,14 @@ int main(){
     }
 
     //read dimensions
-    string line;
-    inStream >> line;
+    int line1, line2;
+    inStream>>line1>>line2;
+    inStream.close();
+    //boardHeight = stoi(line1);
+    //boardWidth = stoi(line2);
+    //cout<< boardHeight<<endl;
+    //cout<<boardWidth<<endl; //broken TODO add end block comment
 
-  /*  boardHeight=line[1];
-    inStream.ignore(10,'\n');
-    boardWidth=line[2];
-
-    cout<< boardHeight;
-    cout << boardWidth;*///broken TODO add end block comment
 
   /*  cout<<"File reading currently broken, please manually enter dimensions"<<endl;
     inStream.close();
@@ -112,22 +112,22 @@ if(randomOrMap == 'r'){
 }
 //ask what mode
 cout<<"Which mode? Classic (c), Mirror (m), or Donut (d)"<<endl;
-cin>>mode;
-if(mode == 'c'){
+cin>>modeChar;
+if(modeChar == 'c'){
   ClassicMode* mode = new ClassicMode();
-}if(mode =='m'){
+}else if(modeChar =='m'){
   MirrorMode* mode = new MirrorMode();
-}if(mode == 'd'){
+}else if(modeChar == 'd'){
   DonutMode* mode = new DonutMode();
 }else{
-  cout<<"Please pick a valid mode";
+  cout<<"Please pick a valid mode"<<endl;
   exit(0);
 }
 
 
-
 //ask if breif pause, or press enter or output to file
 cout<<"Would you like to output to a file?"<<endl;
+
 
 //start printing grids
 
