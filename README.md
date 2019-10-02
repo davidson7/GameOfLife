@@ -6,6 +6,7 @@ CPSC 350-03
 All .cpp files compile without errors
 
 Issues:
+
 main.cpp has segfaults at line 49 and 125
 MirrorMode and Donut Mode countNeighbors fucntions are incomplete
 no grid compare function for infinite generations
