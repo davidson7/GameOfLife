@@ -12,16 +12,14 @@ using namespace std;
 
 /*TODO check order, rows columns, height width
 Mirror: count neighbors and fill grid
-main: relative file location, choose mode, output to file, random dist
-Grid: test print and write compare
+main: file segfault, choose mode, output to file, random dist
+Grid: write compare
 Donut: start
 
 */
 
 int main(){
-  //Grid *firstGrid = new Grid(3,3);
-
-  char randomOrMap;
+    char randomOrMap;
   int boardWidth;
   int boardHeight;
   char modeChar;
@@ -45,20 +43,15 @@ int main(){
       exit(1);
     }
 
-    //read dimensions
-    int line1, line2;
+    //read dimensions -segfault here
+
+    string line1, line2;
     inStream>>line1>>line2;
     inStream.close();
     //boardHeight = stoi(line1);
     //boardWidth = stoi(line2);
     //cout<< boardHeight<<endl;
     //cout<<boardWidth<<endl; //broken TODO add end block comment
-
-
-  /*  cout<<"File reading currently broken, please manually enter dimensions"<<endl;
-    inStream.close();
-    exit(1);*/
-
 
   } if(randomOrMap=='r'){
     //set grid width and check if int
@@ -75,11 +68,8 @@ int main(){
       cout <<"You didn't enter an integer";
       exit(0);
     }
-  else{
-    cout << "Please enter a valid answer";
-    exit(0);
   }
-}
+
 
 
 //set dimensions of grid
@@ -109,7 +99,27 @@ if(randomOrMap == 'r'){
   double concentration;
   cin>>concentration;
 
+//populate board
+  for(int i =0; i<boardHeight; ++i){
+    for(int j =0; j<boardWidth; ++j){
+      char c;
+      int randomNum = rand()%100+1;
+      int intConcentration = concentration*100;
+      if(randomNum<intConcentration){
+        c='-';
+      }
+      else if(randomNum>intConcentration){
+        c='X';
+      }
+      board.manualFill(i,j,c);
+    }
+  }
+
 }
+//print first gen grid
+board.print();
+
+
 //ask what mode
 cout<<"Which mode? Classic (c), Mirror (m), or Donut (d)"<<endl;
 cin>>modeChar;

@@ -5,17 +5,6 @@
 
 using namespace std;
 
-/*Grid::Grid(){
-mWidth = 1;
-mHeight = 1;
-myGrid = new char*[mWidth];
-for(int i = 0; i<mWidth;++i){
-  myGrid[i] = new char[mHeight];
-}
-}*/
-
-
-
 Grid::Grid(int width, int height){
   mWidth = width;
   mHeight = height;
@@ -30,17 +19,11 @@ Grid::Grid(int width, int height){
 }
 }
 
-  /*for(int i = 0; i<mWidth;++i){
-      for(int j = 0; j<mHeight;++j){
-        cout <<"TEST:" << endl;
-    }
-  }*/
-
-
 Grid::~Grid(){
 delete myGrid;
 }
 
+//fill a single position with char
 void Grid::manualFill(int xPosition, int yPosition, char alive){
   myGrid[xPosition][yPosition] = alive;
 }
@@ -70,8 +53,8 @@ bool Grid::fillCell(int c, bool alive){
   }
 }
 
-
-void Grid::print(){ //TODO
+//prints grid to screen
+void Grid::print(){
   for(int i=0; i<mHeight;++i){
     for(int j= 0; j<mWidth; ++j){
       cout<<"| "<<myGrid[i][j]<<" ";
@@ -80,19 +63,15 @@ void Grid::print(){ //TODO
   }
 }
 
+//return gridheight
  int Grid::getHeight(){
    return mHeight;
  }
+ //return grid width
  int Grid::getWidth(){
    return mWidth;
  }
+ //return 'X' or '-'
  char Grid::getChar(int x, int y){
    return myGrid[x][y];
  }
-
-//#endif
-
-/*void Grid::setDimensions(int width, int height){
-  mWidth = width;
-  mHeight = height;
-  myGrid = */
