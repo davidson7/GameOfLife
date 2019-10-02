@@ -1,5 +1,5 @@
-#ifndef GRID_H
-#define GRID_H
+
+#include "Grid.h"
 using namespace std;
 
 class DonutMode{
@@ -10,4 +10,3 @@ public:
   //void display();
   int countNeighbors(Grid g1, int i, int j);
 };
-#endif

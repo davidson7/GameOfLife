@@ -1,5 +1,6 @@
 //game board
-
+#ifndef GRID_H
+#define GRID_H
 using namespace std;
 
 class Grid{
@@ -21,7 +22,7 @@ public:
   int getHeight();
   int getWidth();
   char getChar(int x, int y);
-  
+
 
   //void setDimensions(int width, int length);
 
@@ -32,4 +33,4 @@ private:
   char **myGrid;
 };
 
-//#endif
+#endif

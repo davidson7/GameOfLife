@@ -7,14 +7,13 @@
 #include "DonutMode.h"
 #include "Grid.h"
 
-
 using namespace std;
 
 /*TODO check order, rows columns, height width
 Mirror: count neighbors and fill grid
-Donut: start
 main: relative file location, choose mode, output to file, random dist
 Grid: test print and write compare
+Donut: start
 
 */
 
@@ -34,10 +33,10 @@ int main(){
   //check for valid input and get dimensions of grid, and placement of filled cells
   if(randomOrMap=='m'){
     ifstream inStream;
-    cout<<"What is the absolute path of the file?"<< endl;
+    cout<<"What is the path of the file?"<< endl;
     string filepath;
     cin>>filepath;
-    inStream.open(filepath);
+    inStream.open(filepath.c_str());
 
     //check if file can be opened
     if(inStream.fail()){
@@ -56,9 +55,9 @@ int main(){
     cout<< boardHeight;
     cout << boardWidth;*///broken TODO add end block comment
 
-    cout<<"File reading currently broken, please manually enter dimensions"<<endl;
+  /*  cout<<"File reading currently broken, please manually enter dimensions"<<endl;
     inStream.close();
-    exit(1);
+    exit(1);*/
 
 
   } if(randomOrMap=='r'){
@@ -76,10 +75,11 @@ int main(){
       cout <<"You didn't enter an integer";
       exit(0);
     }
-  }else{
+  else{
     cout << "Please enter a valid answer";
     exit(0);
   }
+}
 
 
 //set dimensions of grid
@@ -138,4 +138,4 @@ cout<<"Would you like to output to a file?"<<endl;
 //ask user to press enter to exit
 return 0;
 }
-#endif
+//#endif

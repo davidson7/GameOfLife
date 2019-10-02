@@ -1,6 +1,8 @@
+//#ifndef GRID_H
+//#define GRID_H
 #include "Grid.h"
 #include <iostream>
-//#include "Cell.h
+
 using namespace std;
 
 /*Grid::Grid(){
@@ -88,7 +90,7 @@ void Grid::print(){ //TODO
    return myGrid[x][y];
  }
 
-
+//#endif
 
 /*void Grid::setDimensions(int width, int height){
   mWidth = width;

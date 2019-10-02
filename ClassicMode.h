@@ -1,5 +1,7 @@
-#ifndef GRID_H
-#define GRID_H
+#include "Grid.h"
+//#ifndef GRID_H
+//#define GRID_H
+
 
 using namespace std;
 
@@ -12,4 +14,4 @@ public:
   void fillGrid(Grid g1, Grid g2);
 };
 
-#endif
+//#endif
