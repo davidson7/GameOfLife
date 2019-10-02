@@ -1,6 +1,9 @@
 # GameOfLife
 Dana Davidson
 2299509
+CPSC 350-03
+
+All .cpp files compile without errors
 
 Issues:
 main.cpp has segfaults at line 49 and 125
